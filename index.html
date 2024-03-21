@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Code Runner</title>
-    <!-- Include CodeMirror CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
-    <!-- Include CodeMirror JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
-    <!-- Include Python Mode for CodeMirror -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/python/python.min.js"></script>
-    <!-- Include Run Python Script JavaScript -->
-    <script src="run_python_script.js"></script>
     <style>
         #editor, #output {
             width: 400px;
@@ -30,18 +22,12 @@
 </head>
 <body>
     <h1>Python Code Runner</h1>
-    <div id="editor"></div>
+    <textarea id="code"></textarea>
     <div>
         <button onclick="runCode()" style="background-color: green; color: white;">Run</button>
         <button onclick="clearOutput()" style="background-color: red; color: white;">Clear</button>
     </div>
     <div id="output"></div>
-    <script>
-        var editor = CodeMirror(document.getElementById("editor"), {
-            mode: "python",
-            lineNumbers: true,
-            theme: "default"
-        });
-    </script>
+    <script src="run_python_script.js"></script>
 </body>
 </html>
