@@ -1,8 +1,8 @@
 function runCode() {
-    var code = editor.getValue();
+    var code = document.getElementById("code").value;
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "Output:<br>";
-    
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:8000/run_python_script", true);
     xhr.setRequestHeader("Content-Type", "application/json");
